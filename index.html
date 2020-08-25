@@ -42,7 +42,13 @@
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                             <div class="col-md-6">
                               <label for="disabledTextInput">Lugar</label>
-                              <input  id="l4" name="lat" type="number" class="form-control">
+                              <select name="lugar" id="l4" class="col-md-offset-3 ">
+                                <option value="0">Sur de Guayaquil</option>
+                                <option value="1">Norte de Guayaquil</option>
+                                <option value="2">Via a la Costa</option>
+                                <option value="3">Centro de Guayaquil</option>
+                              </select>
+
                             </div>
                         </div>
 
@@ -50,14 +56,14 @@
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                             <div class="col-md-6">
                               <label for="disabledTextInput">Latitud</label>
-                              <input  id="latitud" name="lat" type="number" class="form-control">
+                              <input  id="latitud" step="0.000000001" name="lat" type="number" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                             <div class="col-md-6">
                               <label for="disabledTextInput">Longitud</label>
-                                <input id="longitud" name="lon" type="number" class="form-control">
+                                <input id="longitud" step="0.000000001" name="lon" type="number" class="form-control">
                             </div>
                         </div>
 
@@ -65,7 +71,7 @@
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
                             <div class="col-md-6">
                               <label for="disabledTextInput">Dormitorios</label>
-                                <input id="dormitorio"  name="bedrooms" type="number" class="form-control">
+                                <input id="dormitorio"  name="bedrooms" type="number" class="form-control" max="10" min="0">
                             </div>
                         </div>
 
@@ -73,7 +79,7 @@
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
                             <div class="col-md-6">
                               <label for="disabledTextInput">Baños</label>
-                                <input id="baño"  name="bathrooms" type="number" class="form-control">
+                                <input id="baño"  name="bathrooms" type="number" class="form-control" max="10" min="0">
                             </div>
                         </div>
 
@@ -81,7 +87,7 @@
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
                             <div class="col-md-6">
                               <label for="disabledTextInput">Superficie Total</label>
-                                <input id="superficie"  name="surface_total" type="number"  class="form-control">
+                                <input id="superficie"  name="surface_total" type="number"  class="form-control" max="300000" min="10">
                                 
                             </div>
                         </div>
@@ -105,11 +111,20 @@
                   <span class="label label-success" id="algoritmo"></span>
                 </h3>
               <h3>
-                <span class="label label-info" id="error"></span>
-              </h3>
-              <h3>
                 <span class="label label-info" id="correlacion"></span>
               </h3>
+              <h3>
+                <span class="label label-info" id="errorRelativoPromedio"></span>
+              </h3>
+
+              <h3>
+                <span class="label label-info" id="errorAbsolutoPromedio"></span>
+              </h3>
+
+              <h3>
+                <span class="label label-info" id="errorMediaCuadrado"></span>
+              </h3>
+              
               <div class="text-center header">
                 <label id="label"></label>
                 <h3>
